@@ -10,7 +10,6 @@ namespace algorithms\unionFind;
 
 use algorithms\Util;
 
-
 /**
  * Class quickFind
  * @package algorithms\unionFind
@@ -94,6 +93,3 @@ class quickFind
         var_dump($this->_int);
     }
 }
-
-$test = new quickFind();
-$test->start();
