@@ -11,10 +11,10 @@ namespace algorithms\unionFind;
 use algorithms\Util;
 
 /**
- * Class quickUnion
+ * Class QuickUnion
  * @package algorithms\unionFind
  */
-class quickUnion
+class QuickUnion
 {
     /**
      * @var
@@ -32,6 +32,12 @@ class quickUnion
     public $_int;
 
     /**
+     * 用于记录层级比较
+     * @var
+     */
+    public $_deep;
+
+    /**
      * quickFind constructor.
      * @param int $num
      */
@@ -40,6 +46,7 @@ class quickUnion
         $this->_num = $num;
         for ($i = 0; $i < $num; ++$i) {
             $this->_int[$i] = $i;
+            $this->_deep[$i] = 1;
         }
     }
 
@@ -49,7 +56,7 @@ class quickUnion
      */
     public function find($key)
     {
-        if($this->_int[$key] !== $key){
+        if ($this->_int[$key] !== $key) {
             $key = $this->_int[$key];
         }
         return $key;
@@ -73,8 +80,14 @@ class quickUnion
     {
         $pId = $this->find($p);
         $qId = $this->find($q);
-        if($pId == $qId) return;
-        $this->_int[$pId] = $qId;
+        if ($pId == $qId) return;
+        if ($this->_deep[$pId] < $this->_deep[$qId]) {
+            $this->_int[$pId] = $this->_int[$qId];
+            $this->_deep[$pId] += $this->_deep[$qId];
+        } else {
+            $this->_int[$qId] = $this->_int[$pId];
+            $this->_deep[$pId] += $this->_deep[$qId];
+        }
     }
 
     /**

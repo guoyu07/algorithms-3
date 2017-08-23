@@ -11,10 +11,10 @@ namespace algorithms\unionFind;
 use algorithms\Util;
 
 /**
- * Class QuickFind
+ * Class WeightQuickUnion
  * @package algorithms\unionFind
  */
-class QuickFind
+class WeightQuickUnion
 {
     /**
      * @var
@@ -49,7 +49,10 @@ class QuickFind
      */
     public function find($key)
     {
-        return $this->_int[$key];
+        if($this->_int[$key] !== $key){
+            $key = $this->_int[$key];
+        }
+        return $key;
     }
 
     /**
@@ -70,12 +73,8 @@ class QuickFind
     {
         $pId = $this->find($p);
         $qId = $this->find($q);
-        if ($pId == $qId) return;
-        foreach ($this->_int as $k => $v) {
-            if ($v == $pId) {
-                $this->_int[$k] = $qId;
-            }
-        }
+        if($pId == $qId) return;
+        $this->_int[$pId] = $qId;
     }
 
     /**
