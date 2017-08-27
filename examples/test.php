@@ -13,5 +13,9 @@ require_once __DIR__ . '/../autoload.php';
 
 
 // sorts算法
-$test = new \algorithms\sort\Select();
+//$test = new \algorithms\sort\Select();
+//$test->sort();
+
+// insert
+$test = new \algorithms\sort\Insert();
 $test->sort();

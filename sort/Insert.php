@@ -20,6 +20,13 @@ class Insert extends Base
      */
     public function sort()
     {
-        
+        $this->log("start");
+        $start = microtime(true);
+        for ($i = 1; $i < $this->_length; ++$i) {
+            for ($j = $i; $j > 0 && $this->compare($j - 1, $j); --$j) {
+                $this->exchange($j - 1, $j);
+            }
+        }
+        $this->log('end it has spend ' . (microtime(true) - $start));
     }
 }

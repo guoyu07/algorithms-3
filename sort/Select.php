@@ -28,7 +28,7 @@ class Select extends Base
                 }
             }
         }
-        $this->log('it has spend ' . (microtime(true) - $start));
+        $this->log('end it has spend ' . (microtime(true) - $start));
     }
 
 }
