@@ -8,5 +8,10 @@
 require_once __DIR__ . '/../autoload.php';
 
 // union-find的第一版算法
-$test = new \algorithms\unionFind\quickFind();
-$test->start();
+//$test = new \algorithms\unionFind\quickFind();
+//$test->start();
+
+
+// sorts算法
+$test = new \algorithms\sort\Select();
+$test->sort();
