@@ -17,5 +17,9 @@ require_once __DIR__ . '/../autoload.php';
 //$test->sort();
 
 // insert
-$test = new \algorithms\sort\Insert();
+//$test = new \algorithms\sort\Insert();
+//$test->sort();
+
+// shell
+$test = new \algorithms\sort\Shell();
 $test->sort();
