@@ -16,10 +16,15 @@ require_once __DIR__ . '/../autoload.php';
 //$test = new \algorithms\sort\Select();
 //$test->sort();
 
-// insert
+// insert算法
 //$test = new \algorithms\sort\Insert();
 //$test->sort();
 
-// shell
-$test = new \algorithms\sort\Shell();
+// shell算法
+//$test = new \algorithms\sort\Shell();
+//$test->sort();
+
+// merge算法
+$test = new \algorithms\sort\merger\MergeFromTop();
 $test->sort();
+var_dump($test->_shuffle);
