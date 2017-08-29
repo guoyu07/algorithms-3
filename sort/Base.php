@@ -21,7 +21,7 @@ abstract class Base
      * Base constructor.
      * @param int $num
      */
-    public function __construct($num = 5)
+    public function __construct($num = 20)
     {
         $this->_shuffle = Util::makeRandArr(0, $num, $num);
         $this->_length = count($this->_shuffle);
