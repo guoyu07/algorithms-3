@@ -29,6 +29,11 @@ require_once __DIR__ . '/../autoload.php';
 //$test->sort();
 //var_dump($test->_shuffle);
 
-$test = new \algorithms\sort\merger\MergeFromBottom();
+//$test = new \algorithms\sort\merger\MergeFromBottom();
+//$test->sort();
+//var_dump($test->_shuffle);
+
+// quick算法
+$test = new \algorithms\sort\quick\FirstVersion();
 $test->sort();
 var_dump($test->_shuffle);
