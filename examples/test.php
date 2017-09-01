@@ -34,6 +34,11 @@ require_once __DIR__ . '/../autoload.php';
 //var_dump($test->_shuffle);
 
 // quick算法
-$test = new \algorithms\sort\quick\FirstVersion();
+//$test = new \algorithms\sort\quick\FirstVersion();
+//$test->sort();
+//var_dump($test->_shuffle);
+
+// quick 优化
+$test = new \algorithms\sort\quick\ThreePart();
 $test->sort();
 var_dump($test->_shuffle);

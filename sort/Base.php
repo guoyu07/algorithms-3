@@ -50,6 +50,16 @@ abstract class Base
     }
 
     /**
+     * @param $first
+     * @param $next
+     * @return mixed
+     */
+    public function compareTo($first, $next)
+    {
+        return $first - $next;
+    }
+
+    /**
      * @return bool
      */
     public function check()
