@@ -39,6 +39,12 @@ require_once __DIR__ . '/../autoload.php';
 //var_dump($test->_shuffle);
 
 // quick 优化
-$test = new \algorithms\sort\quick\ThreePart();
-$test->sort();
-var_dump($test->_shuffle);
+//$test = new \algorithms\sort\quick\ThreePart();
+//$test->sort();
+//var_dump($test->_shuffle);
+
+// stack 二叉堆
+$test = new \algorithms\sort\stack\TwoFork();
+var_dump($test->_stack);
+var_dump($test->delMax());
+var_dump($test->_stack);

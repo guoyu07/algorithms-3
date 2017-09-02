@@ -81,5 +81,8 @@ abstract class Base
             }, func_get_args())) . PHP_EOL;
     }
 
+    /**
+     * @return mixed
+     */
     abstract public function sort();
 }
